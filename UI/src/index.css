@@ -1,0 +1,703 @@
+/*Author: Ankit Kumar Sharma */
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+JP:wght@100..900&display=swap");
+
+:root {
+  background-image: url(../public/back_wall.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-y: 50px;
+  background-color: rgb(136, 120, 120);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Gowun Batang", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.link-button {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  padding: 10px 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  z-index: 100;
+}
+
+.companyLogo {
+  width: 136px;
+  position: absolute;
+  left: 24px;
+  top: 15px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+a:hover {
+  background-color: #000;
+}
+
+nav>ul>li>a:hover {
+  background-color: #333;
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    padding: 5px 0;
+  }
+
+  li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+}
+
+.upload-json-container,
+.viewJsonContainer,
+.scheduleContainer {
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  top: 69px;
+  bottom: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px;
+  border: 2px solid white;
+  z-index: 10;
+}
+
+.actionContainer {
+  display: flex;
+}
+
+.actionContainerSchedule {
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  width: 320px;
+  margin: auto;
+  row-gap: 5px;
+  column-gap: 5px;
+}
+
+.upload-json-subcontainer,
+.subSchedulerContainer {
+  width: 30%;
+  height: 80%;
+  border: 2px solid #e60027;
+  border-radius: 5px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  background-color: #e60027;
+}
+
+.subSchedulerContainer {
+  flex-direction: column;
+}
+
+.viewJSONChild {
+  border: 2px solid #dad7d7;
+  width: 80%;
+  height: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: auto;
+  background-color: whitesmoke;
+}
+
+.jsonuploadBtn {
+  margin-top: 50px !important;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+.custom-file-upload {
+  border: 2px solid #b6b3b3;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.json-field {
+  width: 250px;
+  display: block;
+  padding: 10px;
+  border: 2px solid #b6b3b3;
+  border-radius: 5px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="datetime-local"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="datetime-local"] {
+  border: 2px solid #b6b3b3;
+  margin-bottom: 20px;
+}
+
+button {
+  display: block;
+  width: 150px;
+  margin: auto;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media only screen and (max-width: 600px) {
+  .auth-container {
+    padding: 10px;
+    margin: 20px auto;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  button {
+    padding: 8px;
+  }
+}
+
+.uploadBtn {
+  margin-left: -2px;
+  font-size: 30px;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-bottom: 100px;
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+.auth-container-login h2 {
+  font-size: 50px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #000000;
+}
+
+.footer {
+  background-color: #e60027;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.not-found-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+h2 {
+  color: #d9534f;
+}
+
+p {
+  color: #333;
+}
+
+@media only screen and (max-width: 600px) {
+  .not-found-container {
+    padding: 10px;
+  }
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+.user-management-container {
+  max-width: 100%;
+  margin: 0px auto 60px auto;
+  padding: 20px;
+  background-color: white;
+}
+
+.dashboardPageContainer {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 100%;
+  min-height: 82vh;
+}
+
+.executingIcon {
+  font-size: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-radius: 10px;
+}
+
+table.userScenarioTable {
+  min-width: 1200px;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+th {
+  background-color: #e5e5e5;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f2f2f2;
+}
+
+tr:hover td {
+  background-color: #f2f2f2;
+}
+
+button {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reg-button {
+  margin: 10px auto;
+}
+
+.reg-button>a {
+  font-size: 17px;
+}
+
+button:hover {
+  background-color: #000;
+}
+
+.delete-button {
+  background-color: #e60027;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 400;
+  padding: 0px;
+  font-size: 27px;
+}
+
+.update-btn-user {
+  padding: 4px;
+  font-size: 20px;
+}
+
+.update-btn-user a {
+  display: block;
+  padding: 0px;
+}
+
+.delete-button:hover {
+  background-color: red;
+}
+
+.profile-page-container {
+  max-width: 100%;
+  padding: 20px;
+  border: 1px solid #e9e5e5;
+  background-color: #f9f9f9;
+  height: 81vh;
+}
+
+.profile-page-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+
+.profile-page-container p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.profile-page-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.profile-page-container button:hover {
+  background-color: #000;
+}
+
+.profile-page-btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5px;
+  height: 305px;
+  overflow: auto;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  height: 40px;
+}
+
+.profile-page-btn-container button {
+  width: 140px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.downloadJSONBtn {
+  display: block;
+  font-size: 25px;
+  width: 191px !important;
+}
+
+.closeJSONView,
+.copyJSONView,
+.closeSchedulerView {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  width: 80px;
+  padding-left: 12px;
+}
+
+.copyJSONView {
+  top: 10px;
+  right: 60px;
+  font-size: 25px;
+}
+
+.profileUserName {
+  margin-left: 0px;
+  color: #333;
+}
+
+svg {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.uploadBtn {
+  font-size: 25px !important;
+}
+
+.logOutBtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.jsonActionBtnContainer {
+  width: 320px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.jsonActionBtnContainer>fieldset {
+  width: 100%;
+  height: 85px;
+  min-height: 80px;
+  display: flex;
+  border: 0px solid #d1caca;
+  border-radius: 10px;
+  padding: 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+fieldset {
+  width: 100%;
+  height: auto;
+  border: 0px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.previewJsonBtn {
+  width: 152px !important;
+  margin-bottom: 5px;
+}
+
+.excuteBtnContainer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.executeJsonBtn {
+  border-radius: 30px !important;
+}
+
+.calenderContainer {
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 10px;
+  top: 91px;
+}
+
+.react-calendar__navigation button {
+  all: unset;
+  color: #333;
+  text-align: center;
+}
+
+.react-calendar button {
+  all: unset;
+  text-align: center;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.react-calendar__tile--now {
+  color: white !important;
+  background-color: #d9534f !important;
+
+}
+
+.react-calendar {
+  width: 300px !important;
+  font: inherit !important;
+  border: 1px solid #e5e5e5 !important;
+  background-color: whitesmoke !important;
+  border-radius: 10px;
+  padding: 10px !important;
+}
+
+.graphContainer {
+  width: 100%;
+  height: 74vh;
+  overflow: auto;
+}
+
+.frame3 {
+  width: 100%;
+  height: 100vh;
+}
+
+.frameContainer {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame1 {
+  width: 60%;
+  height: 100%;
+}
+
+.frame2 {
+  width: 40%;
+  height: 100%;
+}
+
+.css-15okvyg {
+  display: none !important;
+}
+
+.frameContent {
+  width: 100%;
+  height: 100vh;
+  margin-top: -60px;
+}
+
+.overlayDiv1 {
+  width: 686px;
+  height: 36px;
+  position: absolute;
+  top: 71px;
+  background-color: white;
+  left: 10px;
+}
+
+.overlayDiv2 {
+  width: 50px;
+  height: 36px;
+  right: 10px;
+  position: absolute;
+  background-color: white;
+  top: 71px;
+}
